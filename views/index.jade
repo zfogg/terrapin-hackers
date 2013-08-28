@@ -10,6 +10,35 @@ block js
 
 
 block content
-  .row
-    .col6.grid-LT-max-hide
+  .container
+    .sixteen.columns.clearfix
+      nav.three.columns.alpha
+        img(src='images/roboto_below.png', alt='Terrapin Hackers', height='100', width='100')
+        ul
+          li Hack
+          li Who We Are
+          li Learn More
+      .thirteen.columns.omega
+        #canvas
+        hr
+        h2 What is Terrapin Hackers
+        p
+          | Terrapin Hackers is cool. And many other things that will probably fit into one or two more sentences.
+        hr
+        h2 Learn More
+        .thirteen.columns
+          .row
+            .six.columns.alpha
+              form(action='')
+                label(for='regularInput') Name
+                input#regularInput(type='text')
+                label(for='regularInput') Email
+                input#regularInput(type='text')
+                label(for='regularTextarea') Message
+                textarea#regularTextarea
+                button(type='submit') Submit Form
+            .six.columns.omega
+              .media
+                img(src='images/facebook.png', alt='Check us out on Facebook!')
+                img(src='images/twitter.png', alt='Follow us on twitter!')
 
