@@ -1,0 +1,28 @@
+!!! 5
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0")
+
+    meta(name="apple-mobile-web-app-capable", content="yes")
+
+    title Terrapin Hackers
+
+    != css("style")
+    block css
+
+    != js("/bower_components/jquery/jquery")
+    != js("script")
+    block js
+
+  body
+    #wrapper
+      block header
+      #background
+        .grid
+          #content(role="main")
+            block content
+
+    block footer
+      footer#footer.grid
+
