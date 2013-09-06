@@ -6,12 +6,18 @@ html
 
     meta(name="apple-mobile-web-app-capable", content="yes")
 
+    link(rel="shortcut icon", href="/favicon.png", type="image/png")
+    link(rel="shortcut icon", type="image/png", href="/img/favicon.ico")
+
     title Terrapin Hackers
 
-    != css("style")
-    != css("/bower_components/skeleton/stylesheets/base")
+    != css('http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic')
+
+    != css("reset")
+    //-!= css("/bower_components/skeleton/stylesheets/base")
     != css("/bower_components/skeleton/stylesheets/layout")
     != css("/bower_components/skeleton/stylesheets/skeleton")
+    != css("style")
     block css
 
     != js("/bower_components/jquery/jquery")

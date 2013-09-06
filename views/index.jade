@@ -12,43 +12,53 @@ block js
 block content
   .container
     .sixteen.columns.clearfix
-        #logo
+      .row#logo
+        .sixteen.columns.alpha
+          img(src="/img/index/roboto_icon.png", width= "200", height="200")
 
-        #robotFace
-          #eyes
-            #leftEye.eye.robotPart
-              | ter·ra·pin (n.) /ˈtɛrəpɪn/
-              ol
-                li An Algonquian word for turtle.
-                li Any of several North American turtles of the family Emydidae, that live in fresh or brackish water: especially diamondback terrapin. 
-                li Usage: The diamondback terrapin has been the University of Maryland's official school mascot since 1932.
+      .row#robotFace
+        .sixteen.columns.clearfix#eyes
+          .four.columns.alpha#leftEye.eye.robotPart
+            :markdown
+              **ter·ra·pin (n.)**
+              /ˈtɛrəpɪn/
+            :markdown
+              1. Any of several North American turtles of the family Emydidae, that live in fresh or brackish water: especially diamondback terrapin.
+            :markdown
+              *The diamondback terrapin has been the University of Maryland's official school mascot since 1932.*
 
-            #rightEye.eye.robotPart
-              | hack·er (n.) /ˈhækər/
-              ol
-                li One who accesses a computer system by circumventing its security system.
-                li One who makes innovative customizations or combinations of retail electronic and computer equipment.
-                li One who combines excellence, playfulness, cleverness, and exploration in performed activities.
+          .eight.columns.empty
 
-          #nose.robotPart
-            | Make awesome stuff.
-            | Meet fantastic people.
-            | Maybe even start a company.
-            | Hack with us.
-            | Click here to join.
+          .four.columns.omega#rightEye.eye.robotPart
+            :markdown
+              **hack·er (n.)**
+              /ˈhækər/
+            :markdown
+              1. One who makes innovative customizations or combinations of retail electronic and computer equipment.
+              2. One who combines excellence, playfulness, cleverness, and exploration in performed activities.
+          .clear
 
-          #mouth.robotPart
-            | We do three things, and three things only:
-            ol
-              li Build and do cool stuff on campus. We call these "campus hacks". You will hear about these as they happen.
-              li Organize hack nights. This will be a night of hacking and building, along with (hopefully) some good food and TAs to help with homeworks and projects. If you're still not sure what hacking is, read this.
-              li Go to hackathons. We organize massive trips to the best hackathons around; and negotiate for an easier reimbursement process and travel fees. We also try to make these trips unforgettable.
 
-      .media
-        a(href="#")
-          img(src='images/email.gif', alt='Check us out on Facebook!')
-        a(href="#")
-          img(src='images/facebook.gif', alt='Check us out on Facebook!')
-        a(href="#")
-          img(src='images/twitter.gif', alt='Follow us on twitter!')
+        .sixteen.columns#nose.robotPart
+          :markdown
+            Make awesome stuff.
+            Meet fantastic people.
+            Maybe even start a company.
+            Hack with [us](https://www.facebook.com/groups/hackersofmaryland/).
+
+      .sixteen.columns.omega
+        .two.columns.empty.alpha
+        .fourteen.columns.omega#mouth.robotPart
+          p We do three things, and three things only:
+
+          ol
+            li Campus hacks. You'll hear about them when they happen.
+            li
+              :markdown
+                Hack nights. [Hacking](http://stallman.org/articles/on-hacking.html) and free stuff - food, electronics, and TAs.
+            li
+              span.tooltip(title="concentrated innovation efferts") Hackathon
+              |  trips. Massive, unforgettable, swagalicious hackathon trips.
+        .clear
+      .clear
 

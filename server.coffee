@@ -36,7 +36,7 @@ app.configure ->
     app.use app.router
 
 app.configure 'development', ->
-    app.use express.favicon()
+    app.use express.favicon (__dirname + '/public/img/favicon.ico')
     app.use express.logger 'dev'
     app.use express.errorHandler
         dumpExceptions: true
