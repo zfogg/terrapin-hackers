@@ -1,52 +1,56 @@
 *
-  box-sizing border-box
+    box-sizing border-box
 
-p
-  white-space pre-wrap
-  padding 0
-  margin 0
-
-
-input, textarea, button, select
-  -webkit-appearance none
-  border none
-  background transparent
-  &:focus
-    outline none
-
-
-// Main site styles
 html, body
-  height 100%
-  min-height 100%
-
-ol, ul
-  margin 0
-  padding 10px 0 0 1.5em
-  ~p
-    margin-left 1.5em
-  li
-    list-style-type decimal
-    margin-bottom 12px
-
-.tooltip
-  cursor pointer
-  text-decoration underline
+    height 100%
+    min-height 100%
 
 body
-  font-size 17px
-  line-height 1.3em
-  font-family 'Droid Serif', serif
-  color #444
-  text-shadow 1px 0 1px #E3E3E3
+    font-size 17px
+    line-height 1.4em
+    font-family 'Droid Serif', serif
+    color #555
+    text-shadow 1px 0 1px #E3E3E3
+
+h1, h2, h3, h4, h5, h6, strong, b
+    color #444
+
+p
+    padding 0
+    margin 0
+
+a
+    color #777
+    &:hover
+        color #333
 
 em
-  font-style italic
+    font-style italic
+
 strong
-  font-weight bold
+    font-weight bold
+
+ol, ul
+    margin 0
+    padding 10px 0 0 1.5em
+    ~p
+        margin-left 1.5em
+    li
+        list-style-type decimal
+        margin-bottom 12px
+
+input, textarea, button, select
+    -webkit-appearance none
+    border none
+    background transparent
+    &:focus
+        outline none
 
 .empty
-  // Kind of a hack to allow me empty columns that actually affect the grid.
-  height 1px
+    // Kind of a hack to allow me empty columns that actually affect the grid.
+    height 1px
 
+.tooltip
+    cursor pointer
+    text-decoration underline
 

@@ -13,45 +13,50 @@ app = express()
 
 # === Configuration ===
 app.configure ->
+<<<<<<< Updated upstream
     app.set 'port', process.env.PORT or 8080
     app.set 'secret', process.env.SECRET or 'beagle-site'
+=======
+  app.set 'port', process.env.PORT or 8003
+  app.set 'secret', process.env.SECRET or 'beagle-site'
+>>>>>>> Stashed changes
 
-    app.set 'views', __dirname + '/views'
-    app.set 'view engine', 'jade'
+  app.set 'views', __dirname + '/views'
+  app.set 'view engine', 'jade'
 
-    app.use cassets src: 'public'
-    app.use express.static "#{__dirname}/public", maxAge: 86400
+  app.use express.static("#{__dirname}/public", maxAge: 86400)
+  app.use cassets src: 'public'
 
-    app.use express.bodyParser()
-    app.use express.cookieParser()
+  app.use express.bodyParser()
+  app.use express.cookieParser()
 
-    app.use stylus.middleware
-        src: __dirname
-        compile: (str, path) ->
-            stylus(str)
-                .set('filename', path)
-                .set('compress', true)
-                .use(nib())
+  app.use stylus.middleware
+    src: __dirname
+    compile: (str, path) ->
+      stylus(str)
+        .set('filename', path)
+        .set('compress', true)
+        .use(nib())
 
     app.use app.router
 
 app.configure 'development', ->
-    app.use express.favicon (__dirname + '/public/img/favicon.ico')
-    app.use express.logger 'dev'
-    app.use express.errorHandler
-        dumpExceptions: true
-        showStack: true
+  app.use express.favicon (__dirname + '/public/img/favicon.ico')
+  app.use express.logger 'dev'
+  app.use express.errorHandler
+    dumpExceptions: true
+    showStack: true
 
 app.configure 'production', ->
-    app.use express.errorHandler
+  app.use express.errorHandler
 
 
 # === Routes ===
 app.get '/', (req, res) ->
-    res.render ''
+  res.render ''
 
 app.get '/404', (req, res) ->
-    res.send '404', 'Page not found.'
+  res.send '404', 'Page not found.'
 
 
 # === Start ===
