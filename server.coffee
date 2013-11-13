@@ -13,13 +13,8 @@ app = express()
 
 # === Configuration ===
 app.configure ->
-<<<<<<< Updated upstream
-    app.set 'port', process.env.PORT or 8080
-    app.set 'secret', process.env.SECRET or 'beagle-site'
-=======
   app.set 'port', process.env.PORT or 8003
-  app.set 'secret', process.env.SECRET or 'beagle-site'
->>>>>>> Stashed changes
+  app.set 'secret', process.env.SECRET or 'Duck Fuke!'
 
   app.set 'views', __dirname + '/views'
   app.set 'view engine', 'jade'
@@ -54,6 +49,21 @@ app.configure 'production', ->
 # === Routes ===
 app.get '/', (req, res) ->
   res.render ''
+
+app.get '/t', (req, res) ->
+  res.redirect 'https://twitter.com/terrapinhackers'
+
+app.get '/fb', (req, res) ->
+  res.redirect 'https://facebook.com/groups/hackersofmaryland'
+
+app.get '/orgsync', (req, res) ->
+  res.redirect '/join'
+
+app.get '/join', (req, res) ->
+  res.redirect 'https://orgsync.com/join/73768/terrapin-hackers'
+
+app.get '*', (req, res) ->
+  res.redirect '/404'
 
 app.get '/404', (req, res) ->
   res.send '404', 'Page not found.'
