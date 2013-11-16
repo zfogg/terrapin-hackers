@@ -57,7 +57,7 @@ app.get '/t', (req, res) ->
   res.redirect 'https://twitter.com/terrapinhackers'
 
 app.get '/fb', (req, res) ->
-  res.redirect 'https://facebook.com/groups/hackersofmaryland'
+  res.redirect 'https://www.facebook.com/terrapinhackers'
 
 app.get '/orgsync', (req, res) ->
   res.redirect '/join'
